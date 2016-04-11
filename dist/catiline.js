@@ -941,8 +941,8 @@ function initBrowser(catiline){
 }
 
 if(typeof define === 'function'){
-	define(function(require){
-		catiline.SHIM_WORKER_PATH=require.toUrl('./catiline.js');
+	define(function(_require){
+		catiline.SHIM_WORKER_PATH=_require.toUrl('./catiline.js');
 		return catiline;
 	});
 }else if(typeof module === 'undefined' || !('exports' in module)){
